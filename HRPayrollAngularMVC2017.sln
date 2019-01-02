@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPayrollAngularMVC2017", "HRPayrollAngularMVC2017\HRPayrollAngularMVC2017.csproj", "{AE905FB6-B323-405D-B084-3B4E7B4D9457}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE905FB6-B323-405D-B084-3B4E7B4D9457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE905FB6-B323-405D-B084-3B4E7B4D9457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE905FB6-B323-405D-B084-3B4E7B4D9457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE905FB6-B323-405D-B084-3B4E7B4D9457}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3218AA9C-46E9-4AC7-992A-A0144A5A32B6}
+	EndGlobalSection
+EndGlobal
