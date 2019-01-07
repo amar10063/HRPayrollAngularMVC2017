@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -26,6 +27,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -155,10 +157,207 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.component.html" />
+    <Content Include="app\HR\Department\department.component.html" />
+    <Content Include="app\HR\Designation\designation.component.html" />
+    <Content Include="app\footer\footer.component.html" />
+    <Content Include="app\header\header.component.html" />
+    <Content Include="app\HR\Location\location.component.html" />
+    <Content Include="app\sidenav\sidenav.component.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\ag-grid.css" />
+    <Content Include="Content\css\ag-theme-balham.css" />
+    <Content Include="Content\css\bootstrap-grid.min.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\dashboard.css" />
+    <Content Include="Content\css\daterangepicker.min.css" />
+    <Content Include="Content\css\gijgo.min.css" />
+    <Content Include="Content\css\hierarchy-view.css" />
+    <Content Include="Content\css\jquery-ui.css" />
+    <Content Include="Content\css\jquerysctipttop.css" />
+    <Content Include="Content\css\main.css" />
+    <Content Include="Content\css\mdtimepicker.css" />
+    <Content Include="Content\css\mdtimepicker.min.css" />
+    <Content Include="Content\css\orgchart.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\images\add-icon-lg.png" />
+    <Content Include="Content\images\add-icon.png" />
+    <Content Include="Content\images\add.png" />
+    <Content Include="Content\images\agreement-icon.png" />
+    <Content Include="Content\images\AMY-logo.png" />
+    <Content Include="Content\images\appraisal-icon.png" />
+    <Content Include="Content\images\appraisal-icon1.png" />
+    <Content Include="Content\images\appraisal_icon.png" />
+    <Content Include="Content\images\approval-icon.png" />
+    <Content Include="Content\images\approval-icon1.png" />
+    <Content Include="Content\images\approval_icon.png" />
+    <Content Include="Content\images\area-page-img.png" />
+    <Content Include="Content\images\arrow-list.png" />
+    <Content Include="Content\images\back-icon.png" />
+    <Content Include="Content\images\background-image.jpg" />
+    <Content Include="Content\images\benefit-icon.png" />
+    <Content Include="Content\images\cancel-icon.png" />
+    <Content Include="Content\images\check-black.png" />
+    <Content Include="Content\images\check-blue.png" />
+    <Content Include="Content\images\check-orange.png" />
+    <Content Include="Content\images\check-purple.png" />
+    <Content Include="Content\images\check-red.png" />
+    <Content Include="Content\images\check-royalblue.png" />
+    <Content Include="Content\images\check.png" />
+    <Content Include="Content\images\check_bg.png" />
+    <Content Include="Content\images\close-icon.png" />
+    <Content Include="Content\images\company-icon.png" />
+    <Content Include="Content\images\company-icon1.png" />
+    <Content Include="Content\images\cross.png" />
+    <Content Include="Content\images\deduction.png" />
+    <Content Include="Content\images\deduction1.png" />
+    <Content Include="Content\images\deduction_icon.png" />
+    <Content Include="Content\images\default-star.png" />
+    <Content Include="Content\images\del-icon.png" />
+    <Content Include="Content\images\delete-icon-black.png" />
+    <Content Include="Content\images\delete-icon.png" />
+    <Content Include="Content\images\department-icon.png" />
+    <Content Include="Content\images\department-icon1.png" />
+    <Content Include="Content\images\designation-icon.png" />
+    <Content Include="Content\images\designation-icon1.png" />
+    <Content Include="Content\images\down-arrow-lg.png" />
+    <Content Include="Content\images\down-arrow.png" />
+    <Content Include="Content\images\down-border.png" />
+    <Content Include="Content\images\download-icon.png" />
+    <Content Include="Content\images\download.png" />
+    <Content Include="Content\images\earning.png" />
+    <Content Include="Content\images\earning1.png" />
+    <Content Include="Content\images\earning_icon.png" />
+    <Content Include="Content\images\edit-icon-black.png" />
+    <Content Include="Content\images\edit-icon.png" />
+    <Content Include="Content\images\emp-request-icon.png" />
+    <Content Include="Content\images\emp-request-icon1.png" />
+    <Content Include="Content\images\employee-icon.png" />
+    <Content Include="Content\images\employee-icon1.png" />
+    <Content Include="Content\images\error-msg.png" />
+    <Content Include="Content\images\error-msg1.png" />
+    <Content Include="Content\images\eye-icon.png" />
+    <Content Include="Content\images\flag-ind.png" />
+    <Content Include="Content\images\flag-uk.png" />
+    <Content Include="Content\images\flag-us.png" />
+    <Content Include="Content\images\golden-star.png" />
+    <Content Include="Content\images\hired-icon.png" />
+    <Content Include="Content\images\home-icon-lg.png" />
+    <Content Include="Content\images\home-icon.png" />
+    <Content Include="Content\images\hr-icon.png" />
+    <Content Include="Content\images\iace-logo.png" />
+    <Content Include="Content\images\icon1.png" />
+    <Content Include="Content\images\icon2.png" />
+    <Content Include="Content\images\icon3.png" />
+    <Content Include="Content\images\icon4.png" />
+    <Content Include="Content\images\icon5.png" />
+    <Content Include="Content\images\icon6.png" />
+    <Content Include="Content\images\icon7.png" />
+    <Content Include="Content\images\icon8.png" />
+    <Content Include="Content\images\icon9.png" />
+    <Content Include="Content\images\id-card_icon.png" />
+    <Content Include="Content\images\indeed-icon.png" />
+    <Content Include="Content\images\indeed.png" />
+    <Content Include="Content\images\inventory-icon.png" />
+    <Content Include="Content\images\invoice-icon.png" />
+    <Content Include="Content\images\leave-icon.png" />
+    <Content Include="Content\images\leave-icon1.png" />
+    <Content Include="Content\images\leave_management-icon.png" />
+    <Content Include="Content\images\left-arrow.png" />
+    <Content Include="Content\images\leftCon-bg-black.jpg" />
+    <Content Include="Content\images\leftCon-bg-blue.jpg" />
+    <Content Include="Content\images\leftCon-bg-orange.jpg" />
+    <Content Include="Content\images\leftCon-bg-purple.jpg" />
+    <Content Include="Content\images\leftCon-bg-red.jpg" />
+    <Content Include="Content\images\leftCon-bg-royalblue.jpg" />
+    <Content Include="Content\images\leftCon-bg.jpg" />
+    <Content Include="Content\images\load.gif" />
+    <Content Include="Content\images\loading1.gif" />
+    <Content Include="Content\images\location-icon.png" />
+    <Content Include="Content\images\location-icon1.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\minus-icon-lg.png" />
+    <Content Include="Content\images\monster.png" />
+    <Content Include="Content\images\naukri.png" />
+    <Content Include="Content\images\nav-icon1.png" />
+    <Content Include="Content\images\nav-icon2.png" />
+    <Content Include="Content\images\nav-icon3.png" />
+    <Content Include="Content\images\nav-icon4.png" />
+    <Content Include="Content\images\new-icon.png" />
+    <Content Include="Content\images\next-icon-black.png" />
+    <Content Include="Content\images\next-icon-black1.png" />
+    <Content Include="Content\images\next-icon.png" />
+    <Content Include="Content\images\order-icon.png" />
+    <Content Include="Content\images\orgchart.minus.png" />
+    <Content Include="Content\images\orgchart.plus.png" />
+    <Content Include="Content\images\payday_icon.png" />
+    <Content Include="Content\images\payment-icon.png" />
+    <Content Include="Content\images\payment-setup.png" />
+    <Content Include="Content\images\payroll-icon.png" />
+    <Content Include="Content\images\payroll-icon1.png" />
+    <Content Include="Content\images\paySlab.png" />
+    <Content Include="Content\images\paySlab1.png" />
+    <Content Include="Content\images\paySlab_icon.png" />
+    <Content Include="Content\images\payStructure.png" />
+    <Content Include="Content\images\payStructure1.png" />
+    <Content Include="Content\images\payStructure_icon.png" />
+    <Content Include="Content\images\prev-icon-black.png" />
+    <Content Include="Content\images\prev-icon-black1.png" />
+    <Content Include="Content\images\prev-icon.png" />
+    <Content Include="Content\images\profile-img.png" />
+    <Content Include="Content\images\profile-img1.png" />
+    <Content Include="Content\images\purchase-icon.png" />
+    <Content Include="Content\images\recruitment-icon.png" />
+    <Content Include="Content\images\recruitment-icon1.png" />
+    <Content Include="Content\images\recruitment_icon.png" />
+    <Content Include="Content\images\remove-icon.png" />
+    <Content Include="Content\images\report-icon.png" />
+    <Content Include="Content\images\request_icon.png" />
+    <Content Include="Content\images\right-arrow-lg.png" />
+    <Content Include="Content\images\right-arrow.png" />
+    <Content Include="Content\images\save-file-option.png" />
+    <Content Include="Content\images\save-icon.png" />
+    <Content Include="Content\images\save1 copy.png" />
+    <Content Include="Content\images\search-icon-bg.png" />
+    <Content Include="Content\images\search-icon.png" />
+    <Content Include="Content\images\select-icon.png" />
+    <Content Include="Content\images\setup-icon.png" />
+    <Content Include="Content\images\skill-icon.png" />
+    <Content Include="Content\images\skill-icon1.png" />
+    <Content Include="Content\images\skill_icon.png" />
+    <Content Include="Content\images\sm-logo.png" />
+    <Content Include="Content\images\star.png" />
+    <Content Include="Content\images\success-icon-red.png" />
+    <Content Include="Content\images\success-icon.png" />
+    <Content Include="Content\images\team-icon.png" />
+    <Content Include="Content\images\team-icon1.png" />
+    <Content Include="Content\images\up-arrow.jpg" />
+    <Content Include="Content\images\up-arrow.png" />
+    <Content Include="Content\images\upload-icon.png" />
+    <Content Include="Content\images\upload.png" />
+    <Content Include="Content\images\vendor-icon.png" />
+    <Content Include="Content\images\view-icon.png" />
+    <Content Include="Content\images\Yoeki-logo.png" />
+    <Content Include="Content\js\ag-grid-community.min.noStyle.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\daterangepicker.min.js" />
+    <Content Include="Content\js\jquery-1.11.1.min.js" />
+    <Content Include="Content\js\jquery-1.11.3.min.js" />
+    <Content Include="Content\js\jquery-2.2.3.min.js" />
+    <Content Include="Content\js\jquery-ui.js" />
+    <Content Include="Content\js\jquery-ui.min.js" />
+    <Content Include="Content\js\jquery.canvasjs.min.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\mdtimepicker.js" />
+    <Content Include="Content\js\mdtimepicker.min.js" />
+    <Content Include="Content\js\moment.min.js" />
+    <Content Include="Content\js\multiselect.js" />
+    <Content Include="Content\js\orgchart.js" />
+    <Content Include="Content\js\script.js" />
+    <Content Include="Content\js\typescript.compile.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -168,6 +367,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="package.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -179,6 +379,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="systemjs-angular-loader.js" />
+    <Content Include="systemjs.config.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -193,6 +395,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -211,11 +414,25 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app\app.component.ts" />
+    <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\HR\Department\department.component.ts" />
+    <TypeScriptCompile Include="app\HR\Designation\designation.component.ts" />
+    <TypeScriptCompile Include="app\footer\footer.component.ts" />
+    <TypeScriptCompile Include="app\header\header.component.ts" />
+    <TypeScriptCompile Include="app\HR\Location\location.component.ts" />
+    <TypeScriptCompile Include="app\main.ts" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
