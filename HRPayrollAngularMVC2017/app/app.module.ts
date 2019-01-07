@@ -21,3 +21,4 @@ import { FooterComponent } from './footer/footer.component';
     bootstrap: [AppComponent]
 })
 export class AppModule { }
+
